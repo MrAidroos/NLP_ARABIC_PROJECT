@@ -17,11 +17,29 @@ git clone https://github.com/yourusername/arabic-nlp.git
 pip install -r requirements.txt
 
 
-## 🧩 حل مشكلة camel_tools
-إذا واجهت خطأ في تحميل البيانات:
-1. حمل [catalogue-1.5.json](https://raw.githubusercontent.com/CAMeL-Lab/camel-tools-data/main/catalogue-1.5.json)
-2. ضعه في المسار:  C:\Users\USER\.camel_tools\data\
-أو عيّن مسارًا مخصصًا عبر:
+## 🧩 هيكل المشروع
+```
+project/
+├── app.py
+├── requirements.txt
+├── templates/
+│   ├── index.html
+│   ├── explanation.html
+│   ├── text_analysis.html
+│   ├── search.html
+│   └── challenges.html
+├── static/
+│   ├── css/
+│   └── js/
+└── documents/
+```
+
+## 🔍 استكشاف الأخطاء وإصلاحها
+إذا واجهت مشكلات مع camel_tools:
+1. تأكد من تنزيل ملف [catalogue-1.5.json](https://raw.githubusercontent.com/CAMeL-Lab/camel-tools-data/main/catalogue-1.5.json)
+2. ضعه في المسار: `C:\Users\<USER>\.camel_tools\data\`
+3. أو عيّن مساراً مخصصاً:
 ```python
 import os
-os.environ['CAMELTOOLS_DATA'] = 'custom_path'
+os.environ['CAMELTOOLS_DATA'] = 'C:/custom_path/.camel_tools_data'
+```
