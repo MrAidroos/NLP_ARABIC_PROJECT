@@ -6,6 +6,11 @@
 - `transformers` للتعرف على الكيانات
 - تقنيات معالجة اللغة الطبيعية
 
+
+For Support and disclaimer Contact me:
+E-mail: aidrooss12370@gmail.com
+Whatsapp: +967 773006111
+telegram: @aid12370
 ## ⚙️ التثبيت
 ```bash
 git clone https://github.com/yourusername/arabic-nlp.git
