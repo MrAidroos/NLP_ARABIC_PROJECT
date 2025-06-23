@@ -18,7 +18,6 @@ pip install -r requirements.txt
 
 
 ## 🧩 هيكل المشروع
-```
 project/
 ├── app.py
 ├── requirements.txt
