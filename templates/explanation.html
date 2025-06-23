@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">شرح التقنيات</h2>
+    <table class="table table-bordered mt-4">
+        <thead class="table-primary">
+            <tr>
+                <th>التقنية</th>
+                <th>الوصف</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>n-grams</td>
+                <td>تقسيم النص إلى تسلسلات متجاورة من الكلمات بطول معين (n)، مثل الكلمات الفردية (Unigrams)، أزواج الكلمات (Bigrams)، أو ثلاثيات الكلمات (Trigrams).</td>
+            </tr>
+            <tr>
+                <td>POS Tags</td>
+                <td>تحديد نوع الكلمة في النص (مثل: اسم، فعل، صفة) لكل كلمة.</td>
+            </tr>
+            <tr>
+                <td>Named Entities</td>
+                <td>استخراج الكيانات المسمّاة مثل أسماء الأشخاص، الأماكن، المنظمات، والتواريخ.</td>
+            </tr>
+            <tr>
+                <td>Unigrams</td>
+                <td>تحليل النص على مستوى الكلمات الفردية.</td>
+            </tr>
+            <tr>
+                <td>Bigrams</td>
+                <td>تحليل النص على مستوى أزواج الكلمات المتجاورة.</td>
+            </tr>
+            <tr>
+                <td>Trigrams</td>
+                <td>تحليل النص على مستوى ثلاثيات الكلمات المتجاورة.</td>
+            </tr>
+            <tr>
+                <td>Stemming</td>
+                <td>إرجاع الكلمات إلى جذورها (مثل: "يكتبون" تصبح "كتب").</td>
+            </tr>
+            <tr>
+                <td>Lemmatization</td>
+                <td>إعادة الكلمات إلى شكلها الأساسي أو القاموسي (مثل: "أفضل" تصبح "جيد").</td>
+            </tr>
+            <tr>
+                <td>Regular Expressions</td>
+                <td>البحث عن أنماط معينة في النصوص مثل الأرقام، العناوين الإلكترونية، أو الكلمات التي تبدأ بحرف معين.</td>
+            </tr>
+            <tr>
+                <td>All Techniques</td>
+                <td>تنفيذ جميع التقنيات المذكورة أعلاه في تحليل واحد.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

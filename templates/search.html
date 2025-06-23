@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h2>Text Search</h2>
+    <form method="post" class="mt-4">
+        <input type="text" name="keyword" class="form-control" placeholder="Enter a keyword" required>
+        <button type="submit" class="btn btn-primary mt-3">Search</button>
+    </form>
+</div>
+
+{% if results %}
+<div class="mt-5">
+    <h3>Search Results for "{{ keyword }}"</h3>
+    <table class="table table-bordered table-striped mt-4">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Occurrences</th>
+                <th>Lines Containing the Keyword</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.file }}</td>
+                <td>{{ result.count }}</td>
+                <td>
+                    <ul>
+                        {% for line in result.lines %}
+                        <li>{{ line }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- عرض المجموع الكلي -->
+    <div class="alert alert-info mt-4">
+        <strong>Total Occurrences:</strong> {{ total_count }}
+    </div>
+</div>
+{% else %}
+{% if keyword %}
+<p class="text-center text-danger mt-4">No results found for "{{ keyword }}"</p>
+{% endif %}
+{% endif %}
+{% endblock %}
